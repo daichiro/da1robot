@@ -31,7 +31,7 @@ module.exports = function(robot) {
   end = function(name) {
     var key = 'start.' + name;
     var startTime = robot.brain.get(key);
-    if startTime == undefined {
+    if (startTime === undefined) {
       robot.send('作業を開始していなかったよ');
     } else {
       var diff = moment().subtract(startTime).format('h:mm');
@@ -53,7 +53,7 @@ module.exports = function(robot) {
       var target = today.subtract(i, 'days').format('YYYY-MM-DD');
       var key = name + '.' + target;
       var value = robot.brain.get(key);
-      messages.append(target + ': ' + value);
+      messages.push(target + ': ' + value);
     }
     var message = messages.join('\n');
     robot.send(message);
