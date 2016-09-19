@@ -15,12 +15,10 @@
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.1",
     "hubot-slack": "^3.3.0",
-    "cron": ">= 1.0.4"
+    "cron": ">= 1.0.4",
+    "moment": "^2.15.0"
   },
   "engines": {
     "node": "0.10.x"
-  },
-  "devDependencies": {
-    "moment": "^2.15.0"
   }
 }
